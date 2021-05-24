@@ -1,12 +1,6 @@
 public class Planet{
     public double xxPos,yyPos,xxVel,yyVel,mass;
     public String imgFileName;
-    public static final double G;
-
-
-    static {
-        G = 6.67e-11;
-    }
 
     /**
      * @param xP the x-position of a planet
@@ -40,6 +34,7 @@ public class Planet{
      }
 
      public double calcForceExertedBy(Planet b){
+        double G = 6.67e-11;
         double Force = this.mass * b.mass * G/(this.calcDistance(b) * this.calcDistance(b));
         return Force;
      }
