@@ -1,7 +1,7 @@
 public class Planet{
-    double xxPos,yyPos,xxVel,yyVel,mass;
-    String imgFileName;
-    static final double G;
+    public double xxPos,yyPos,xxVel,yyVel,mass;
+    public String imgFileName;
+    public static final double G;
 
 
     static {
@@ -22,7 +22,7 @@ public class Planet{
         xxVel = xV;
         yyVel = yV;
         mass = m;
-        imgFileName = "images/"+imgfilename;
+        imgFileName = imgfilename;
 }
      public Planet(Planet b){
      }
@@ -89,6 +89,6 @@ public class Planet{
         this.yyPos += this.yyVel * dt;
     }
     public void draw(){
-        StdDraw.picture(this.xxPos,this.yyPos,this.imgFileName);
+        StdDraw.picture(this.xxPos,this.yyPos,"images/"+this.imgFileName);
     }
 }
