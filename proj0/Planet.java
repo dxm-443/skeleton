@@ -19,6 +19,12 @@ public class Planet{
         imgFileName = imgfilename;
 }
      public Planet(Planet b){
+         xxPos = b.xxPos;
+         yyPos = b.yyPos;
+         xxVel = b.xxVel;
+         yyVel = b.yyVel;
+         mass = b.mass;
+         imgFileName = b.imgFileName;
      }
 
     /**
